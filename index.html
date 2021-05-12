@@ -4,14 +4,19 @@
         <title>André Blog</title>
         <meta name="description" content="Blog Pessoal">
         <meta name="keywords" content="blog, pessoal, programação">
-        <link rel="stylesheet" href="css/style2.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <script type="text/javascript">
+            function Aviso(msg){
+                alert(msg);
+            }
+        </script>
     </head>
     <body>
     <center>
         <h1>Login</h1>
-        <h2>teste</h2> teste
-        
-        <img src="images/perfil.png" alt="Perfil" width="100">
+        <img id="imagem-header" src="images/lock.png" alt="Perfil">
+        <br>
         <br>
         <br>
         <form action="index.html" method="POST" class="">
@@ -19,10 +24,14 @@
             <br>
             <input type="text" placeholder="Senha">
             <br>
-            <input type="submit" value="Fazer Login">
+            <input type="submit" class="btn btn-green" value="Fazer Login">
+            <input class="btn btn-blue" onclick="Aviso('Campos Limpos Com Sucesso')" type="reset"  value="Limpar Campos">
             <br><br>
             <a href="esqueci-senha.html">Esqueci a minha senha</a>
         </form>
+
+        <br><br><br>
+        <img class="logotipo" src="images/99coders.png" alt="99 Coders"> 
     </center>
     </body>
 </html>

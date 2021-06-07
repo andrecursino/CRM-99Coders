@@ -6,11 +6,14 @@ function Banner(){
             <div className="row">
 
                 <div className="col-lg-6">
-                    <h1>Coluna 1</h1>
+                    <h1>Uma plataforma de CRM simples de configurar e fácil de usar.</h1>
+                    <h4>Gerencie seus clientes em um único lugar.</h4>
+                    <button type="button" className="btn btn-dark btn-lg btn-banner">Criar uma conta</button>
+                    <button type="button" className="btn btn-outline-ligth btn-lg btn-banner">Fazer login</button>
                 </div>
 
                 <div className="col-lg-6">
-                    <h1>Coluna 2</h1>
+                    <img src="Images/screenshot-crm.png"/>
                 </div>
                 
             </div>

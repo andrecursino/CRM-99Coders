@@ -23,7 +23,7 @@ function Menu(){
               <a className="nav-link" aria-current="page" href="#">Clientes</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">Planos e Preços</a>
+              <a className="nav-link" aria-current="page" href="#">Planos e PreÃ§os</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" aria-current="page" href="#">Contato</a>

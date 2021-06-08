@@ -1,29 +1,32 @@
 import react from 'react';
 
 function Testemunho(){
-  return <section id="features">
+  return <section id="testemunho">
     <div className="container">
-      <div className="row">
+    <div id="carouselExampleInterval" className="carousel carousel-dark  slide" data-bs-ride="carousel">
+        <div className="carousel-inner">
+            <div className="carousel-item active" data-bs-interval="5000">
+                <h2>Excelente ferramenta para acompanhamento do dia a dia, sendo flexível o suficiente para a maior parte dos usos. Seja para controle de CRM ou para controle de visitas, o 99 CRM tem se revelado uma ferramenta muito útil e intuitiva.</h2>
+                <img src="Images/cliente.jpg"/>                
+                <em>Marcio Martins - São Paulo</em>  
+            </div>      
 
-        <div className="col-lg-4 feature-box">
-          <i class="icon fas fa-heart fa-5x"></i>
-          <h3>Fácil de Usar</h3>
-          <p>O sistema possui uma interface simples e fácil de utilizar.</p>
+            <div className="carousel-item" data-bs-interval="5000">
+                <h2>Excelente ferramenta para acompanhamento do dia a dia, sendo flexível o suficiente para a maior parte dos usos. Seja para controle de CRM ou para controle de visitas, o 99 CRM tem se revelado uma ferramenta muito útil e intuitiva.</h2>
+                <img src="Images/cliente.jpg"/>                
+                <em>João Silva - Rio de Janeiro</em>  
+            </div>      
+
+            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Previous</span>
+            </button>
+            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Next</span>
+            </button>
         </div>
-
-        <div className="col-lg-4 feature-box">
-          <i class="icon fas fa-globe-americas fa-5x"></i>
-          <h3>Em qualquer lugar</h3>
-          <p>Gerencie seu fluxo de negócios de forma eficiente, onde quer que você esteja.</p>
-        </div>
-
-        <div className="col-lg-4 feature-box">
-          <i class="icon fas fa-columns fa-5x"></i>
-          <h3>Organização é tudo</h3>
-          <p>Tenha sua carteira de clientes sempre muito bem organizada.</p>
-        </div>
-
-      </div>
+    </div>
     </div>
   </section>
 }

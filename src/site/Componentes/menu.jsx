@@ -1,7 +1,7 @@
 import react from 'react';
 
 function Menu(){
-    return <nav className="navbar navbar-expand-md navbar-dark">
+    return <nav className="navbar fixed-top navbar-expand-md navbar-dark">
     <div className="container">  
         <a className="navbar-brand" href="#">
           <img src="Images/logo.png" alt=""  height="28"/>
@@ -14,19 +14,19 @@ function Menu(){
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">Home</a>
+              <a className="nav-link" aria-current="page" href="#banner">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">Features</a>
+              <a className="nav-link" aria-current="page" href="#features">Features</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">Clientes</a>
+              <a className="nav-link" aria-current="page" href="#testemunho">Clientes</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">Planos e Preços</a>
+              <a className="nav-link" aria-current="page" href="#preco">Planos e Preços</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">Contato</a>
+              <a className="nav-link" aria-current="page" href="#footer">Contato</a>
             </li>
           </ul>
         </div> 

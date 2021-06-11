@@ -1,9 +1,9 @@
 import React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 
-/* Páginas */
+/* PÃ¡ginas */
 import Site from './site/site.jsx';
-import Login from './app/login.jsx';
+import Login from './app/Login/login.jsx';
 
 function App(){
     return <BrowserRouter>

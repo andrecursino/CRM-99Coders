@@ -5,7 +5,7 @@ function Card(props){
     <h3>{props.nome}</h3>
     <p>{props.email}</p>
     <p>{props.fone}</p>
-    <p>Código: {props.codigo}</p>
+    <p>CÃ³digo: {props.codigo}</p>
     </div>;
   }
 

@@ -1,5 +1,5 @@
 import React, {useState}  from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import './login.css';
 
 import firebase from '../Config/firebase'; 
@@ -14,12 +14,9 @@ function Login(){
   function LoginUsuario(){
     firebase.auth().signInWithEmailAndPassword(email, senha)
       .then(function(firebaseUser){
-        //sucesso    
         setSucesso('S'); 
       })
       .catch(function(error){
-        //erro
-        //alert(error);
         setSucesso('N');  
       });
   }
@@ -51,9 +48,8 @@ function Login(){
         
         <br/>
 
-        {
-          sucesso === 'N' ? <div className="alert alert-danger mt-2" role="alert">E-mail ou senha inválida.</div> : null
-        } 
+        {sucesso === 'N' ? <div className="alert alert-danger mt-2" role="alert">E-mail ou senha inválida.</div> : null} 
+        {sucesso === 'S' ? <Redirect to='/app/home' /> : null}  
 
         <div className="login-links mt-5">
           <Link to="/app/resetsenha" className="mx-3">Esqueci minha senha</Link>

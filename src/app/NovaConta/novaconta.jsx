@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import './novaconta.css';
 
 import firebase from '../Config/firebase'; 
@@ -10,6 +10,7 @@ function NovaConta(){
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [mensagem, setMensagem] = useState('');
+  const [sucesso, setSucesso] = useState('');
 
   function cadastrarUsuario(){
     setMensagem('');
@@ -30,8 +31,9 @@ function NovaConta(){
     }
 
     firebase.auth().createUserWithEmailAndPassword(email, senha).then(resultado =>{
-      alert('Usuário criado com sucesso');
+      setSucesso('S');
     }).catch(error => {
+      setSucesso('N');
       if (error.message === 'The email address is already in use by another account.') {
         setMensagem('Endereço de email já utilizado.');
       } else if (error.message === 'The email address is badly formatted.') {
@@ -62,6 +64,7 @@ function NovaConta(){
         <button onClick={cadastrarUsuario} className="w-100 btn btn-lg btn-primary" type="button">Criar Conta</button>
 
         {mensagem.length > 0 ? <div className="alert alert-danger mt-2" role="alert">{mensagem}</div> : null} 
+        {sucesso === 'S' ? <Redirect to='/app/home'/> : null}
 
 
         <div className="login-links mt-5">
